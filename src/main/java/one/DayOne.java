@@ -24,7 +24,7 @@ public class DayOne {
           currSum = 0;
         }
       }
-      listOfSums.add(currSum); // to add the calories of the last elf, cause file does not ent with empty line
+      listOfSums.add(currSum); // to add the calories of the last elf, cause file does not end with empty line
     }
     return listOfSums;
   }
@@ -42,13 +42,13 @@ public class DayOne {
 
   public int getTheMaxSum() {
     List<Integer> sortedListOfSums = getListOfSumsSortedInDescOrder();
-    if (sortedListOfSums.isEmpty()) throw new RuntimeException("Not enough elements in the list");
+    if (sortedListOfSums.isEmpty()) throw new RuntimeException("Not enough elements in the list!");
     return sortedListOfSums.get(0);
   }
 
   public int getTheMaxSumFromTopThree() {
     List<Integer> sortedListOfSums = getListOfSumsSortedInDescOrder();
-    if (sortedListOfSums.size() < 3) throw new RuntimeException("Not enough elements in the list");
+    if (sortedListOfSums.size() < 3) throw new RuntimeException("Not enough elements in the list!");
     return sortedListOfSums.get(0) + sortedListOfSums.get(1) + sortedListOfSums.get(2);
   }
 }
